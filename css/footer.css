@@ -1,0 +1,100 @@
+.footer {
+  background: #333;
+  color: #fff;
+  padding: 50px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.footer-col .line {
+  display: inline-block;
+  width: 4px;
+  height: 18px;
+  background: orange;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.footer-col p, 
+.footer-col a, 
+.footer-col li {
+  font-size: 14px;
+  margin: 6px 0;
+  color: #ccc;
+}
+
+.footer-col a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.footer-col a:hover {
+  color: orange;
+}
+
+/* Subscribe form */
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.subscribe-form input {
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  background: #777;
+  color: #fff;
+}
+
+.subscribe-form input::placeholder {
+  color: #ddd;
+}
+
+.subscribe-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  background: orange;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.subscribe-form button:hover {
+  background: #ffb347;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  border-top: 1px solid #444;
+  margin-top: 30px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.footer-bottom a {
+  color: #fff;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.footer-bottom a:hover {
+  color: orange;
+}
