@@ -167,12 +167,14 @@ nav.desktop-nav a:hover {
   overflow:hidden;
 }
 .hero__bg {
-  position:absolute;
-  inset:0;
+  position: absolute;
+  inset: 0;
   background-image: url(./images/hero_desktop);
-  background-size:cover;
-  background-position:center;
-  filter:contrast(1.05) saturate(0.95);
+  background-size: 120%;   /* фон більший за контейнер */
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: contrast(1.02) saturate(0.95);
+  will-change: background-position;
 }
 
 
