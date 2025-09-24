@@ -52,7 +52,7 @@ body {
   transform: rotateY(360deg);
 }
 
-
+/* MENU */
 
 nav.desktop-nav {
   margin-left:24px;
@@ -67,8 +67,20 @@ nav.desktop-nav a {
   font-weight:600;
   padding:8px 10px;
   border-radius:8px;
+
+  transition: color 0.2s ease;
 }
-nav.desktop-nav a:hover { background:var(--glass) }
+
+/* Nav Active linck */
+.desktop-nav .navigation-ative {
+    color: var(--accent);
+    pointer-events: none;
+}
+
+nav.desktop-nav a:hover { 
+    
+    color:var(--accent); 
+}
 
 .header-actions {
   display:flex;

@@ -1,0 +1,48 @@
+.categories, .deliveries {
+  margin: 60px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.categories h2, .deliveries h2{
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--dark);
+}
+
+.categories .card-grid, .deliveries  .card-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.categories .card, .deliveries .card{
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categories .card img, .deliveries .card img{
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.categories .card p, .deliveries .card p{
+  font-size: 16px;
+  margin: 10px 0;
+  color: var(--dark);
+}
+
+.card .price {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.categories .card:hover,.deliveries .card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
