@@ -41,8 +41,15 @@ body {
 }
 
 .logo-img {
-  width: auto;        /* автоматично підбирає ширину */
+  width: auto;
+  height: 48px;       /* щоб було стабільно */
   display: block;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.logo:hover .logo-img {
+  transform: rotateY(360deg);
 }
 
 
@@ -82,15 +89,51 @@ nav.desktop-nav a:hover { background:var(--glass) }
 .phone-time {
   font-size:12px;
 }
+
+/* BUTON */
+
 .cta {
-  background:var(--accent);
-  color:white;
-  border:none;
-  padding:10px 16px;
-  border-radius:10px;
-  font-weight:700;
-  text-decoration:none;
+  position: relative;
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  overflow: hidden;
+  transition: color 0.2s ease;
+  z-index: 1;
 }
+
+/* створюємо фон-градієнт для ефекту */
+.cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--dark);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.2s ease;
+  z-index: -1;
+  border-radius: inherit;
+}
+
+/* при наведенні фон розгортається з центру в сторони */
+.cta:hover::before,
+.cta:focus::before {
+  transform: scaleX(1);
+}
+
+/* при наведенні текст стає кольору акценту */
+.cta:hover,
+.cta:focus {
+  color: floralwhite;
+}
+
+
+
 .mobile-toggle {
   display:none;
   margin-left:auto;
@@ -98,6 +141,9 @@ nav.desktop-nav a:hover { background:var(--glass) }
   border:0;
   font-size:20px;
 }
+
+
+
 
 /* --- hero / banner --- */
 .hero {
