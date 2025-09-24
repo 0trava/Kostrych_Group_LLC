@@ -32,34 +32,21 @@ body {
   align-items:center;
   gap:20px;
 }
+
+/* LOGO */
 .logo {
-  display:flex;
-  align-items:center;
-  gap:12px;
-  text-decoration:none;
-  color:var(--dark);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
-.logo .mark {
-  width:46px;
-  height:46px;
-  border-radius:8px;
-  background:linear-gradient(135deg,var(--accent), #074a80);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:white;
-  font-weight:700;
-  box-shadow: 0 4px 14px rgba(11,111,182,0.2);
+
+.logo-img {
+  width: auto;        /* автоматично підбирає ширину */
+  display: block;
 }
-.logo-sub {
-  font-size:14px;
-  color:var(--muted);
-  font-weight:600;
-}
-.logo-main {
-  font-size:15px;
-  font-weight:700;
-}
+
+
+
 nav.desktop-nav {
   margin-left:24px;
   display:flex;
