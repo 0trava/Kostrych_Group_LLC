@@ -23,6 +23,7 @@
   text-align: center;
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .categories .card img, .deliveries .card img{
