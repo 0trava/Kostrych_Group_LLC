@@ -154,22 +154,21 @@
 
     <!-- Line Section -->
 <section class="line-section">
-    
   <ul class="line-container">
     <li class="line-item">
-      <h2>20</h2>
+      <h2 data-target="20">0</h2>
       <p>Років на ринку</p>
     </li>
     <li class="line-item">
-      <h2>35</h2>
+      <h2 data-target="35">0</h2>
       <p>Партнерів по всій Україні</p>
     </li>
     <li class="line-item">
-      <h2>#01</h2>
+      <h2 data-target="120">0</h2>
       <p>???</p>
     </li>
     <li class="line-item">
-      <h2>2 640</h2>
+      <h2 data-target="2640">0</h2>
       <p>Успішних поставок</p>
     </li>
   </ul>
@@ -178,7 +177,7 @@
 
 
     <!-- About US -->
-    <section class="about" >
+    <section class="about">
         <div class="container about__container">
             <div class="about__content">
                 <h2 class="about__title">Про компанію</h2>
@@ -199,9 +198,11 @@
             </div>
 
             <div class="about__images">
-                <img src="./images/about_us_1.webp" alt="виробництво">
-                <img src="./images/about_us_2.webp" alt="будівництво">
-                <img src="./images/about_us_3.jpg" alt="склад">
+                <div class="about__images_block1">
+                    <img class="about__image1" src="./images/about_us_1.webp" alt="виробництво">
+                    <img class="about__image2" src="./images/about_us_3.jpg" alt="будівництво">
+                </div>
+                <img class="about__image3" src="./images/about_us_2.webp" alt="склад">
             </div>
         </div>
     </section>
@@ -279,6 +280,7 @@
     </script>
 
     <script src="./js/hero_move.js" defer></script>
+    <script src="./js/counter.js" defer></script>
 
 </body>
 

@@ -38,6 +38,11 @@
   font-weight: 700;
   margin-bottom: 10px;
   margin-top: 0;
+  transition: color 0.3s ease;
+}
+
+.line-item h2.counting {
+  color: var(--white, #c5dcfc); /* підсвічує під час анімації */
 }
 
 .line-item p {
