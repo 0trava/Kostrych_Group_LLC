@@ -1,0 +1,47 @@
+
+
+.line-section {
+  background: url(../images/line_image.jpg) center/cover no-repeat;
+  padding: 60px 0;
+  color: #fff;
+  text-align: center;
+
+  
+}
+
+.line-section .line-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.line-item {
+  display: flex;
+  flex-direction: column;
+  height: 225px;
+  width: 225px;
+  justify-content: flex-start;
+  padding-top: 20px;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  /* background: rgba(0, 0, 0, 0.3); */
+  /* backdrop-filter: blur(3px); */
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+
+.line-item h2 {
+  font-size: 70px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.line-item p {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
