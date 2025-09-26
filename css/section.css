@@ -3,6 +3,8 @@
   margin: 40px auto;
   max-width: 100%;
   padding: 0 15px;
+    width: 80vw;
+
 }
 
 .categories h2, .deliveries h2 {
@@ -105,17 +107,23 @@
   .categories h2, .deliveries h2 {
     font-size: 22px;
   }
+
+    .categories, .deliveries {
+    width: 80vw;
+  }
 }
 
 /* великі планшети ≥980px */
+
 @media (min-width: 980px) {
+
   .categories .card-grid {
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 16px;
   }
 
   .categories, .deliveries {
-    max-width: 80vw;
+    width: 80vw;
   }
 }
 

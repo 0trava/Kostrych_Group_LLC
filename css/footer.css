@@ -3,14 +3,29 @@
   color: #fff;
   padding: 50px 20px 20px;
   font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 40px;
+  width: 80vw;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (min-width: 900px) {
+  .footer-container {
+    width: 80vw;
+    margin: 0 auto; /* центровано, але займає ширше */
+    padding: 0;     /* щоб не "вужчало" через падінги */
+  }
+
+
 }
 
 .footer-col h3 {
@@ -23,7 +38,7 @@
   display: inline-block;
   width: 4px;
   height: 18px;
-  background: orange;
+  background: var(--accent);
   margin-right: 8px;
   vertical-align: middle;
 }
@@ -43,7 +58,7 @@
 }
 
 .footer-col a:hover {
-  color: orange;
+  color: var(--accent);
 }
 
 /* Subscribe form */
@@ -69,10 +84,11 @@
   padding: 10px;
   border: none;
   border-radius: 3px;
-  background: orange;
+  background: var(--accent);
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s;
+
 }
 
 .subscribe-form button:hover {
@@ -87,6 +103,8 @@
   text-align: center;
   font-size: 13px;
   color: #aaa;
+  width: 100vw;
+
 }
 
 .footer-bottom a {
@@ -98,3 +116,5 @@
 .footer-bottom a:hover {
   color: orange;
 }
+
+
