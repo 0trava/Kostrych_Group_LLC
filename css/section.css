@@ -1,40 +1,49 @@
+/* === Base styles (mobile-first) === */
 .categories, .deliveries {
-  margin: 60px auto;
-  max-width: 1200px;
-  padding: 0 20px;
+  margin: 40px auto;
+  max-width: 100%;
+  padding: 0 15px;
 }
 
-.categories h2, .deliveries h2{
-  font-size: 24px;
-  margin-bottom: 20px;
+.categories h2, .deliveries h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
   color: var(--dark);
 }
 
-.categories .card-grid, .deliveries  .card-grid{
+.categories .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: 1fr; /* мобайл: 1 в ряд */
+  gap: 12px;
 }
 
-.categories .card, .deliveries .card{
+.categories .card,
+.deliveries .card {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.06);
   text-align: center;
-  padding: 20px;
+  padding: 16px;
+  
+  /* тільки потрібні анімації */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categories .card {
   cursor: pointer;
 }
 
-.categories .card img, .deliveries .card img{
-  max-width: 100px;
+.categories .card img,
+.deliveries .card img {
+  max-width: 70px;
   height: auto;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
-.categories .card p, .deliveries .card p{
-  font-size: 16px;
-  margin: 10px 0;
+.categories .card p,
+.deliveries .card p {
+  font-size: 14px;
+  margin: 8px 0;
   color: var(--dark);
 }
 
@@ -43,34 +52,15 @@
   color: var(--accent);
 }
 
-.categories .card:hover,.deliveries .card:hover{
+.categories .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.12);
 }
 
-
-
-
-/* === Categories адаптив === */
-@media (max-width: 980px) {
-  .categories, .deliveries {
-    width: 80vw;
-  }
-  .categories .card-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .categories .card-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* === Deliveries скрол + адаптив === */
+/* === Deliveries скрол (mobile-first) === */
 .deliveries .card-grid {
   display: flex;
-  gap: 20px;
+  gap: 16px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
@@ -80,21 +70,17 @@
 .deliveries .card {
   flex: 0 0 auto;
   scroll-snap-align: start;
-  min-width: 220px;
+  min-width: 150px;
 }
 
 .deliveries .card-grid::-webkit-scrollbar {
-  display: none; /* ховаємо скрол */
+  display: none;
 }
 
 /* автопрокрутка по колу */
 @keyframes scrollLoop {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
 .deliveries .scroll-loop {
@@ -103,25 +89,72 @@
   animation: scrollLoop 25s linear infinite;
 }
 
-/* адаптив для Deliveries */
-@media (max-width: 768px) {
+/* === Breakpoints === */
+
+/* планшети ≥600px */
+@media (min-width: 600px) {
+  .categories .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .deliveries .card {
     min-width: 180px;
     padding: 16px;
   }
+
+  .categories h2, .deliveries h2 {
+    font-size: 22px;
+  }
 }
 
-@media (max-width: 480px) {
+/* великі планшети ≥980px */
+@media (min-width: 980px) {
+  .categories .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+  }
+
+  .categories, .deliveries {
+    max-width: 80vw;
+  }
+}
+
+/* десктопи ≥1200px */
+@media (min-width: 1200px) {
+  .categories, .deliveries {
+    max-width: 1200px;
+  }
+
+  .categories .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    height: 220px;
+    justify-content: center;
+  }
+
+  .categories h2, .deliveries h2 {
+    font-size: 24px;
+  }
+
+  .categories .card {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
   .deliveries .card {
-    min-width: 150px;
-    padding: 12px;
+    min-width: 220px;
+    padding: 20px;
+
   }
 
   .deliveries .card img {
-    max-width: 70px;
+    max-width: 100px;
   }
 
   .deliveries .card p {
-    font-size: 14px;
+    font-size: 16px;
   }
 }

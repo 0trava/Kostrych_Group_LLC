@@ -72,7 +72,17 @@
 }
 
 /* --- Адаптив --- */
+@media (max-width: 1200px) {
+
+
+ .about__container {
+    width: 80vw;
+ }   
+}
+
+
 @media (max-width: 940px) {
+
   .about__images {
     flex-direction: column; /* замість grid */
     height: auto; /* даємо блоку рости */

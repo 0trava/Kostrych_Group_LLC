@@ -48,7 +48,7 @@
 }
 
 /* планшети ≥768px */
-@media (min-width: 768px) {
+@media (min-width: 825px) {
   .line-item {
     width: 150px;
     height: 150px;
