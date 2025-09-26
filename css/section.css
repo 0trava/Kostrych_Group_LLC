@@ -47,3 +47,81 @@
   transform: translateY(-6px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.12);
 }
+
+
+
+
+/* === Categories адаптив === */
+@media (max-width: 980px) {
+  .categories, .deliveries {
+    width: 80vw;
+  }
+  .categories .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .categories .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Deliveries скрол + адаптив === */
+.deliveries .card-grid {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px;
+}
+
+.deliveries .card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  min-width: 220px;
+}
+
+.deliveries .card-grid::-webkit-scrollbar {
+  display: none; /* ховаємо скрол */
+}
+
+/* автопрокрутка по колу */
+@keyframes scrollLoop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.deliveries .scroll-loop {
+  display: flex;
+  gap: 20px;
+  animation: scrollLoop 25s linear infinite;
+}
+
+/* адаптив для Deliveries */
+@media (max-width: 768px) {
+  .deliveries .card {
+    min-width: 180px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .deliveries .card {
+    min-width: 150px;
+    padding: 12px;
+  }
+
+  .deliveries .card img {
+    max-width: 70px;
+  }
+
+  .deliveries .card p {
+    font-size: 14px;
+  }
+}
