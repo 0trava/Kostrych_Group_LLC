@@ -387,6 +387,15 @@ nav.desktop-nav {
   .logo-main { font-size:14px }
   .phone { display:none }
   .cta { display:none }
+  .hero {padding-top: 120px;}
+  .btn-primary, .btn-ghost {
+    font-size: 14px;
+  }
+
+  .hero-left {flex: 1 1 300px;}
+  .hero-left p {
+    font-size: 16px;
+  }
 }
 
 /* ---------BURGER MENU---------------------------- */
