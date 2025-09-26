@@ -73,10 +73,12 @@ nav.desktop-nav a {
 }
 
 /* Nav Active linck */
-.desktop-nav .navigation-ative {
+.desktop-nav .navigation-ative, .mobile-nav .navigation-ative {
     color: var(--accent);
     pointer-events: none;
 }
+
+
 
 nav.desktop-nav a:hover { 
     
@@ -331,6 +333,16 @@ p.lead {
 .card p { margin:0; color:rgba(255,255,255,0.85); font-size:14px }
 
 /* responsive */
+@media (max-width: 1080px) {
+nav.desktop-nav {
+    margin-left: 5px;
+    display: flex
+;
+    gap: 0px;
+    align-items: center;
+    flex: 1;
+}
+}
 @media (max-width: 980px){
     .header {
         justify-content: space-between;
@@ -343,6 +355,12 @@ p.lead {
     gap:22px;
     align-items:flex-start;
   }
+  .hero {height: 100vh;}
+
+  .hero-left {
+    flex: 1 1 440px;
+    max-width: 760px;
+}
   .hero-right { width:100% }
 
   .hero__bg {
@@ -356,6 +374,15 @@ p.lead {
   .logo-main { font-size:14px }
   .phone { display:none }
   .cta { padding:8px 12px; font-size:14px }
+
+}
+
+
+@media (max-width:420px){
+  .container { padding:12px }
+  .logo-main { font-size:14px }
+  .phone { display:none }
+  .cta { display:none }
 }
 
 /* ---------BURGER MENU---------------------------- */
@@ -363,29 +390,38 @@ p.lead {
 .mobile-nav {
   position:fixed;
   inset:0;
-  background:rgba(7,22,39,0.85);
+  background:rgba(7,22,39,0.90);
   color:white;
   z-index:200;
   display:none;
   padding:40px 20px;
 
 }
+.mobile-nav.open {
+ display: flex;
+ flex-direction: column;
+ justify-content: start;
+}
+
 .mobile-nav-list {
+ padding-top: 40px;
  display: flex;
  flex-direction: column;
  justify-content: center;
- width: 40vw;
+ align-items: start;
+padding-left: 40px;
+
 }
 
 
 
 .mobile-nav.open { display:block }
-.mobile-nav a {
-  display:block;
+.mobile-nav-list a {
+  /* display:block; */
   color:white;
   text-decoration:none;
   padding:12px 0;
-  font-size:18px;
+  font-size:24px;
   font-weight:700;
 }
 .close-mobile {
@@ -399,11 +435,42 @@ p.lead {
 }
 
 /* BUtton burger */
-.mobile-cta { margin-top:20px }
-
 .mobile-cta {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
     padding: 10px 5px;
+    padding-left: 40px;
+    margin-top:20px
+
+}
+
+.btn-primary {
+  transition: color 0.2s ease;
+  z-index: 1;
+}
+
+/* створюємо фон-градієнт для ефекту */
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--muted);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.2s ease;
+  z-index: -1;
+  border-radius: inherit;
+
+}
+
+/* при наведенні фон розгортається з центру в сторони */
+.btn-primary:hover::before,
+.btn-primary:focus::before {
+  transform: scaleX(1);
+}
+
+/* при наведенні текст стає кольору акценту */
+.btn-primary:hover,
+.btn-primary:focus {
+  color: floralwhite;
 }
