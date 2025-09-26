@@ -152,7 +152,7 @@ nav.desktop-nav a:hover {
   margin-left:auto;
   background:none;
   border:0;
-  font-size:20px;
+  font-size:32px;
 }
 
 
@@ -332,6 +332,9 @@ p.lead {
 
 /* responsive */
 @media (max-width: 980px){
+    .header {
+        justify-content: space-between;
+    }
   nav.desktop-nav { display:none }
   .mobile-toggle { display:block }
   .hero-inner {
@@ -341,6 +344,12 @@ p.lead {
     align-items:flex-start;
   }
   .hero-right { width:100% }
+
+  .hero__bg {
+    background-position: center top;
+    background-size: auto 120%; 
+    
+  }
 }
 @media (max-width:520px){
   .container { padding:12px }
@@ -349,7 +358,8 @@ p.lead {
   .cta { padding:8px 12px; font-size:14px }
 }
 
-/* mobile nav panel */
+/* ---------BURGER MENU---------------------------- */
+
 .mobile-nav {
   position:fixed;
   inset:0;
@@ -358,7 +368,17 @@ p.lead {
   z-index:200;
   display:none;
   padding:40px 20px;
+
 }
+.mobile-nav-list {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ width: 40vw;
+}
+
+
+
 .mobile-nav.open { display:block }
 .mobile-nav a {
   display:block;
@@ -377,4 +397,13 @@ p.lead {
   right:18px;
   top:18px;
 }
+
+/* BUtton burger */
 .mobile-cta { margin-top:20px }
+
+.mobile-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 5px;
+}
