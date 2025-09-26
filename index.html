@@ -29,11 +29,11 @@
             </a>
 
             <nav class="desktop-nav" role="navigation" aria-label="Головне меню">
-                <a href="/" class="navigation-ative">Головна</a>
-                <a href="#">Про компанію</a>
-                <a href="#">Каталог</a>
+                <a href="/">Головна</a>
+                <a href="#about">Про компанію</a>
+                <a href="#catalog">Каталог</a>
                 <a href="#">Послуги</a>
-                <a href="#">Контакти</a>
+                <a href="#contacts">Контакти</a>
             </nav>
 
             <div class="header-actions">
@@ -54,13 +54,13 @@
     <div class="mobile-nav" id="mobileNav" aria-hidden="true">
         <button id="closeMobile" class="close-mobile">✕</button>
 
-        <nav class="mobile-nav-list">
-            <a href="/"  class="navigation-ative">Головна</a>
-            <a href="#">Про компанію</a>
-            <a href="#">Каталог</a>
-            <a href="#">Послуги</a>
-            <a href="#">Контакти</a>
-        </nav>
+<nav class="mobile-nav-list">
+    <a href="/">Головна</a>
+    <a href="#about">Про компанію</a>
+    <a href="#catalog">Каталог</a>
+    <a href="#">Послуги</a>
+    <a href="#contacts">Контакти</a>
+</nav>
         <div class="mobile-cta">
             <a href="tel:+380675042175"  class="btn-primary">Зв'язатись із менеджером</a>
         </div>
@@ -106,7 +106,7 @@
 
     <!-- Section -->
 
-    <section class="categories" aria-label="Топ-категорії">
+    <section class="categories" id="catalog" aria-label="Топ-категорії">
         <h2>Топ-категорії</h2>
         <div class="card-grid">
             <div class="card">
@@ -179,7 +179,7 @@
 
 
     <!-- About US -->
-    <section class="about">
+    <section class="about" id="about">
         <div class="container about__container">
             <div class="about__content">
                 <h2 class="about__title">Про компанію</h2>
@@ -213,7 +213,7 @@
 
     <!-- Footer -->
 
-    <footer class="footer">
+    <footer class="footer" id="contacts">
         <div class="footer-container">
 
             <!-- Main Office -->
@@ -236,9 +236,6 @@
                 </form>
             </div>
 
-            <div class="footer-col">
-
-            </div>
 
             <!-- Links -->
             <div class="footer-col footer-col-lust">
@@ -255,37 +252,16 @@
         </div>
 
         <div class="footer-bottom">
-            <p>Creator © 2025. <a href="#">Privacy Policy</a></p>
+            <p>Made in Ukraine © 2025. <a href="#">SimpleSite</a></p>
         </div>
     </footer>
 
-
-
-    <script>
-        // просте мобільне меню
-        const mobileToggle = document.getElementById('mobileToggle');
-        const mobileNav = document.getElementById('mobileNav');
-        const closeMobile = document.getElementById('closeMobile');
-
-        mobileToggle.addEventListener('click', () => {
-            mobileNav.classList.add('open');
-            mobileNav.setAttribute('aria-hidden', 'false');
-        });
-        closeMobile.addEventListener('click', () => {
-            mobileNav.classList.remove('open');
-            mobileNav.setAttribute('aria-hidden', 'true');
-        });
-
-        mobileNav.addEventListener('click', (e) => {
-            if (e.target === mobileNav) {
-                mobileNav.classList.remove('open');
-                mobileNav.setAttribute('aria-hidden', 'true');
-            }
-        });
-    </script>
+<!-- ADD SCRIPTS  -->
 
     <script src="./js/hero_move.js" defer></script>
     <script src="./js/counter.js" defer></script>
+    <script src="./js/scrollspy.js" defer></script>
+    <script src="./js/mobile-menu.js" defer></script>
 
 </body>
 
