@@ -1,0 +1,171 @@
+.clients {
+  padding: 60px 0px 0px 0px;
+  font-family: Arial, sans-serif;
+}
+
+
+.clients-title {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    gap: 20px;
+}
+
+.clients-title h2{
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #0b6fb6;
+  width: 100%;
+}
+
+.clients-container {
+  display: flex;
+  max-width: 100vw;
+  margin: 0 auto;
+  align-items: stretch;   /* обидві колонки однакової висоти */
+  min-height: 400px;      /* задай висоту секції */
+}
+
+/* Логотипи */
+.clients-logos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+  grid-template-rows: repeat(2, 1fr);    /* 2 рядки */
+  width: 50%;
+  height: 100%; /* тепер працює, бо є висота у контейнера */
+}
+
+.clients-logos-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F2F3F8;
+  width: 100%;
+  height: 100%;
+}
+
+.durk {
+  background-color: #E6E7EC;
+}
+
+.clients-logos img {
+  max-width: 60%;
+  max-height: 60%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.clients-logos img:hover {
+  transform: scale(0.9);
+  filter: grayscale(0%);
+}
+
+.clients-testimonials {
+  display: flex;
+
+  position: relative;
+  background: url(../images/kukul_475.jpg) center/cover no-repeat;
+  color: #fff;
+    padding: 70px 20px;
+    min-height: 250px;
+}
+
+.testimonial {
+  display: none;
+  text-align: center;
+}
+
+.testimonial.active {
+  display: block;
+  animation: fade 0.8s ease;
+}
+
+/* Avatar */
+.testimonial-images {
+    display: inline-block;
+    width: ;
+    border-radius: 50%;
+    border: 12px solid rgba(235, 235, 235, 0.37);
+}
+
+
+.testimonial-images img {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    border-radius: 50%; }
+
+
+.testimonial p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.testimonial h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  border: none;
+  font-size: 28px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+button.prev:hover, button.next:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+button.prev {
+  left: 15px;
+}
+
+button.next {
+  right: 15px;
+}
+
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Адаптивність */
+@media (max-width: 992px) {
+  .clients-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .clients-logos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .clients-logos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .clients-testimonials {
+    padding: 20px;
+  }
+
+  .testimonial p {
+    font-size: 16px;
+  }
+}
