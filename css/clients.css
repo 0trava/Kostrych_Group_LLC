@@ -36,7 +36,7 @@
   grid-template-columns: repeat(2, 1fr); /* 2 колонки */
   grid-template-rows: repeat(2, 1fr);    /* 2 рядки */
   width: 50%;
-  height: 100%; /* тепер працює, бо є висота у контейнера */
+  min-height: 400px; /* тепер працює, бо є висота у контейнера */
 }
 
 .clients-logos-item {
