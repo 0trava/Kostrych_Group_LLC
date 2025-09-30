@@ -26,8 +26,8 @@
   display: flex;
   max-width: 100vw;
   margin: 0 auto;
-  align-items: stretch;   /* обидві колонки однакової висоти */
-  min-height: 400px;      /* задай висоту секції */
+  align-items: stretch;  
+  min-height: 400px;     
 }
 
 /* Логотипи */
