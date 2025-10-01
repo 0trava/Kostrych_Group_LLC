@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./css/about_us.css">
     <link rel="stylesheet" href="./css/line.css">
     <link rel="stylesheet" href="./css/clients.css">
+    <link rel="stylesheet" href="./css/modalwindow.css">
 </head>
 
 <body>
@@ -80,7 +81,7 @@
                 <p class="lead">Постачаємо матеріали для підприємств, механічних цехів та серійного виробництва.
                     Гарантія якості, швидка логістика по Україні.</p>
                 <div class="hero-cta">
-                    <a href="#" class="btn-primary">Запитати прайс</a>
+                    <a href="#" id="openPriceBtn" class="btn-primary">Запитати прайс</a>
                     <a href="#" class="btn-ghost">Каталог продукції</a>
                 </div>
             </div>
@@ -276,7 +277,7 @@
             <!-- Main Office -->
             <div class="footer-col">
                 <h3><span class="line"></span>ТОВ "КОСТРИЧ ГРУП"</h3>
-                <p>6036 Richmond hwy., Alexandria, VA, 2230</p>
+                <p> 08130, Київська обл., с. Петропавлівська Борщагівка</p>
                 <p><strong>Будні:</strong> 8:00–18:00 <strong>Вихідні:</strong> зачинені</p>
                 <p><strong>Бухгалтерія:</strong> info@demolink.org</p>
                 <p><strong>Менеджер:</strong> infosupport@demolink.org</p>
@@ -313,13 +314,54 @@
         </div>
     </footer>
 
+
+
+    <!-- Модальне вікно ----------------------------------------------------->
+
+  <div id="priceModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle" aria-modal="true">
+    <div class="modal__overlay" data-close></div>
+    <div class="modal__dialog" role="document">
+      <button class="modal__close" id="modalClose" aria-label="Закрити">✕</button>
+      <h2 id="modalTitle" class="modal__title">Запит на прайс</h2>
+
+      <form id="priceForm" class="modal__form" novalidate>
+        <p class="modal__hint">Вкажіть електронну пошту або телефон (достатньо одного поля), та текст повідомлення.</p>
+
+        <label class="field">
+          <span class="field__label">Електронна пошта</span>
+          <input type="email" id="email" name="email" class="field__input" placeholder="example@mail.com" />
+          <span class="field__error" id="emailError" aria-live="polite"></span>
+        </label>
+
+        <label class="field">
+          <span class="field__label">Телефон</span>
+          <input type="tel" id="phone" name="phone" class="field__input" placeholder="+380 66 123 4567" />
+          <span class="field__error" id="phoneError" aria-live="polite"></span>
+        </label>
+
+        <label class="field">
+          <span class="field__label">Текст повідомлення</span>
+          <textarea id="message" name="message" class="field__textarea" rows="4" placeholder="Опишіть, який прайс цікавить..."></textarea>
+          <span class="field__error" id="messageError" aria-live="polite"></span>
+        </label>
+
+        <div class="modal__actions">
+          <button type="submit" class="btn-primary">Відправити</button>
+        </div>
+
+        <div id="formStatus" class="form-status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+
     <!-- ADD SCRIPTS  -->
 
     <script src="./js/hero_move.js" defer></script>
     <script src="./js/counter.js" defer></script>
     <script src="./js/scrollspy.js" defer></script>
     <script src="./js/mobile-menu.js" defer></script>
-    <script src="clients.js"></script>
+    <script src="./js/clients.js" defer></script>
+    <script src="./js/modalwindow.js" defer></script>
 
 </body>
 

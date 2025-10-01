@@ -1,0 +1,148 @@
+/* Базові стилі */
+:root{
+  --bg:#ffffff;
+  --text:#111;
+  --primary:#1e88e5;
+  --overlay: rgba(0,0,0,0.5);
+  --radius:8px;
+  --gap:12px;
+  font-family: Inter, Roboto, Arial, sans-serif;
+  box-sizing: border-box;
+}
+*{box-sizing:inherit}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.4;
+  /* padding:32px; */
+}
+
+/* hero-cta */
+.hero-cta{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.btn-primary, .btn-ghost{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:600;
+}
+.btn-primary{
+  background:var(--primary);
+  color:#fff;
+}
+.btn-ghost{
+  background:transparent;
+  border:1px solid #ccc;
+  color:var(--text);
+}
+
+/* Модальне вікно */
+.modal{
+  display:none; /* приховано за замовчуванням */
+  position:fixed;
+  inset:0;
+  z-index:1000;
+  align-items:center;
+  justify-content:center;
+}
+
+/* коли модал активна, додамо клас .is-open через JS */
+.modal.is-open{
+  display:flex;
+}
+
+/* затемнення */
+.modal__overlay{
+  position:absolute;
+  inset:0;
+  background:var(--overlay);
+}
+
+/* діалог */
+.modal__dialog{
+  position:relative;
+  width:100%;
+  max-width:520px;
+  margin:16px;
+  background:#fff;
+  border-radius:var(--radius);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  padding:20px 20px 24px;
+  z-index:2;
+  transform-origin:center;
+}
+
+/* кнопка закрити у верхньому лівому куті */
+.modal__close{
+  position:absolute;
+  left:12px;
+  top:12px;
+  background:transparent;
+  border:0;
+  font-size:18px;
+  line-height:1;
+  cursor:pointer;
+  padding:6px;
+  border-radius:6px;
+}
+.modal__close:focus{
+  outline:2px solid rgba(30,136,229,0.3);
+}
+
+/* заголовок */
+.modal__title{
+  margin:6px 0 14px 0;
+  font-size:20px;
+  text-align:center;
+}
+
+/* форма */
+.modal__form{display:block}
+.field{display:block;margin-bottom:12px}
+.field__label{display:block;margin-bottom:6px;font-size:13px;color:#333}
+.field__input, .field__textarea{
+  width:100%;
+  padding:10px 12px;
+  border:1px solid #d0d0d0;
+  border-radius:6px;
+  font-size:14px;
+  background:#fff;
+}
+.field__input:focus, .field__textarea:focus{
+  outline:2px solid rgba(30,136,229,0.18);
+  border-color:var(--primary);
+}
+.field__error{
+  display:block;
+  margin-top:6px;
+  font-size:13px;
+  color:#b00020;
+  min-height:18px;
+}
+
+/* дії */
+.modal__actions{
+  display:flex;
+  justify-content:center;
+  margin-top:6px;
+}
+
+/* статус форми */
+.form-status{
+  margin-top:10px;
+  text-align:center;
+  font-size:14px;
+  color:green;
+  min-height:18px;
+}
+
+/* адаптив */
+@media (max-width:480px){
+  .modal__dialog{padding:16px}
+  .modal__title{font-size:18px}
+}
