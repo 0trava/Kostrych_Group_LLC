@@ -69,6 +69,10 @@
   padding-bottom: 10px;
 }
 
+.deliveries {
+  overflow: hidden;
+}
+
 .deliveries .card {
   flex: 0 0 auto;
   scroll-snap-align: start;

@@ -34,10 +34,10 @@ body{
 .btn-primary{
   background:var(--primary);
   color:#fff;
+  border: none;
 }
 .btn-ghost{
   background:transparent;
-  border:1px solid #ccc;
   color:var(--text);
 }
 
