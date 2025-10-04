@@ -15,7 +15,7 @@
 
 .categories .card-grid {
   display: grid;
-  grid-template-columns: 1fr; /* мобайл: 1 в ряд */
+  grid-template-columns: 1fr; 
   gap: 12px;
 }
 
