@@ -27,7 +27,7 @@
   text-align: center;
   padding: 16px;
   
-  /* тільки потрібні анімації */
+ 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
