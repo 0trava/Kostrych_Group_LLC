@@ -60,6 +60,7 @@
 }
 
 /* === Deliveries скрол (mobile-first) === */
+
 .deliveries .card-grid {
   display: flex;
   gap: 16px;
@@ -97,7 +98,7 @@
 
 /* === Breakpoints === */
 
-/* планшети ≥600px */
+
 @media (min-width: 600px) {
   .categories .card-grid {
     grid-template-columns: repeat(2, 1fr);
