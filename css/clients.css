@@ -82,13 +82,14 @@
 
 .testimonial.active {
   display: block;
+  width: 80%;
+  margin: 0 auto; 
   animation: fade 0.8s ease;
 }
 
 /* Avatar */
 .testimonial-images {
     display: inline-block;
-    width: ;
     border-radius: 50%;
     border: 12px solid rgba(235, 235, 235, 0.37);
 }
@@ -148,11 +149,17 @@ button.next {
 @media (max-width: 992px) {
   .clients-container {
     flex-direction: column;
+    width: 100Vw;
     text-align: center;
   }
 
   .clients-logos {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+
+  .clients-testimonials {
+    width: 100%;
   }
 }
 
