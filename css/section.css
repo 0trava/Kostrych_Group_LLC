@@ -26,6 +26,7 @@
   box-shadow: 0 4px 8px rgba(0,0,0,0.06);
   text-align: center;
   padding: 16px;
+  text-decoration: none;
   
  
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -33,6 +34,10 @@
 
 .categories .card {
   cursor: pointer;
+}
+
+.categories a{
+  text-decoration: none;
 }
 
 .categories .card img,

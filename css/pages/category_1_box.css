@@ -8,8 +8,10 @@
 
 .category-intro h1 {
   font-size: 32px;
-  color: #0B3D91;
+  color: #0b6fb6;
   margin-bottom: 15px;
+  text-shadow: none;
+  font-weight: 700;
 }
 
 .category-intro p {
@@ -62,7 +64,7 @@
 
 .faq-section h2 {
   font-size: 24px;
-  color: #0B3D91;
+  color: var(--dark);
   margin-bottom: 20px;
 }
 
